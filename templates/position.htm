@@ -1,5 +1,6 @@
 {% extends 'layout.htm' %}
-{% block styles %} <link rel="stylesheet" href="/assets/about.css"> {% endblock %}
+{% load static %}
+{% block styles %} <link rel="stylesheet" type="text/css" href="{% static '/about.css' %}"> {% endblock %}
 {% block content %}
 <div class="row">
   <div class="left" style="background-color:#bbb;">
@@ -21,7 +22,7 @@
   <div class="right" style="background-color:#ddd;">
     <h2>PROFILE</h2>
     <div class="image">
-      <img src="/assets/image/p{{image}}.jpg">
+      <img src="/static/image/p{{image}}.jpg">
     </div>
     <h3>ชื่อ: {{name}}</h3>
     <h3>เลขผู้ป่วย: {{number}}</h3>
